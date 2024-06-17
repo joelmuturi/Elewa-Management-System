@@ -1,0 +1,92 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Form container */
+  .form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: calc(100% - 12px);
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .form-group button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .form-group a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .form-group button:hover,
+  .form-group a:hover {
+    background: #555;
+  }
+  
+  /* Error/Success messages */
+  .message {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .message p {
+    margin: 0;
+  }
+  
+  .message.hidden {
+    display: none;
+  }
+  
