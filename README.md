@@ -1,4 +1,4 @@
-##Elewa Manageement System
+##Elewa Management System
 
 ## Description
 A web application to manage company employees, departments, and tasks.
@@ -28,4 +28,4 @@ A web application to manage company employees, departments, and tasks.
 MIT
 
 # Elewa-Management-System
- a7398aa974b4cd4c2546ace42a0c640b8f10f3c9
+
