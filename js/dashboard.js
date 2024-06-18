@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   logoutBtn.addEventListener('click', () => {
     firebase.auth().signOut().then(() => {
-      window.location.href = 'public\index.html';
+      window.location.href = 'index.html';
     });
   });
 
