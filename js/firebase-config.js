@@ -1,14 +1,20 @@
-// Your web app's Firebase configuration
+// firebase-config.js
+const dotenv = require('dotenv');
+dotenv.config();
+
 const firebaseConfig = {
-    apiKey: "AIzaSyAoFaQVL7Ze2sBb6zxfHa_vP6ceThDVPyM",
-    authDomain: "elewa-ms.firebaseapp.com",
-    projectId: "elewa-ms",
-    storageBucket: "elewa-ms.appspot.com",
-    messagingSenderId: "407212626924",
-    appId: "1:407212626924:web:1fa29d849e38cefc12e6c9"
-  };
-  
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
+};
+
+const firebase = require('firebase/app');
+require('firebase/auth');
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+module.exports = firebase;

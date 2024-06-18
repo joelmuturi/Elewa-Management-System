@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elewa Management System</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
   <script>
-   // Your web app's Firebase configuration
+   // web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyAoFaQVL7Ze2sBb6zxfHa_vP6ceThDVPyM",
     authDomain: "elewa-ms.firebaseapp.com",
@@ -32,60 +32,62 @@
     </div>
 
     <!-- Login Form -->
-    <div id="loginForm" class="form-container">
-      <h2>Login</h2>
-      <form id="loginFormElement">
-        <div class="form-group">
-          <label for="loginEmail">Email</label>
-          <input type="email" id="loginEmail" name="loginEmail" required>
+   <section class="contaier forms">
+    <div class="form signin" id="main">
+      <div class="form-content">
+        <header>Login</header>
+        <form action="#">
+          <div class="field input-field">
+            <input id="email" type="email" placeholder="email" class="input" required>
+          </div>
+          <div class="field input-field">
+            <input id="password" type="password" placeholder="password" class="password" required>
+            <i class='fa fa-eye-slash eye-icon'></i>
+          </div>
+          <div class="form-link">
+            <a href="#" class="forgot-pass">Forgot Password?</a>
+          </div>
+          <div class="field button-field">
+            <button id="submit">Login</button>
+          </div>
+        </form>
+        <div class="form-link">
+          <span>Haven't registered? <a id="signup" class="link signup-link">Signup</a></span>
         </div>
-        <div class="form-group">
-          <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" name="loginPassword" required>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn">Login</button>
-          <a href="#" onclick="forgotPassword()">Forgot Password?</a>
-        </div>
-      </form>
+      </div>
     </div>
-
-    <!-- Forgot Password Form (Initially hidden) -->
-    <div id="forgotPasswordForm" class="form-container hidden">
-      <h2>Forgot Password</h2>
-      <form id="forgotPasswordFormElement">
-        <div class="form-group">
-          <label for="forgotPasswordEmail">Email</label>
-          <input type="email" id="forgotPasswordEmail" name="forgotPasswordEmail" required>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn">Reset Password</button>
-        </div>
-      </form>
-    </div>
-
     <!-- Sign-up Form -->
-    <div id="signupForm" class="form-container">
-      <h2>Sign Up</h2>
-      <form id="signupFormElement">
-        <div class="form-group">
-          <label for="signupEmail">Email</label>
-          <input type="email" id="signupEmail" name="signupEmail" required>
+    <div class="form signup" id="create-acct">
+      <div class="form-content">
+        <header>Signup</header>
+        <form action="#">
+          <div class="field input-field">
+            <input id="email-signup" type="email" placeholder="Email" class="input" required>
+          </div>
+          <div class="field input-field">
+            <input id="confirm-email-signup" type="email" placeholder="Confirm Email" class="input" required>
+          </div>
+          <div class="field input-field">
+            <input id="password-signup" type="password" placeholder="Create password" class="password" required>
+          </div>
+          <div class="field input-field">
+            <input id="confirm-password-signup" type="password" placeholder="Confirm password" class="password" required>
+            <i class="bx bx-hide eye-icon"></i>
+          </div>
+          <div class="field button-field">
+            <button id="create-acct-btn">Signup</button>
+          </div>
+        </form>
+        <div class="form-link">
+          <span>Already have an account? <a href="#" id="return-btn" class="link login-link">Login</a></span>
         </div>
-        <div class="form-group">
-          <label for="signupPassword">Password</label>
-          <input type="password" id="signupPassword" name="signupPassword" required>
-        </div>
-        <div class="form-group">
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" required>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn">Sign Up</button>
-        </div>
-      </form>
+      </div>
     </div>
 
+   </section>
+
+    
+    
     <!-- Error/Success Messages -->
     <div id="errorMessage" class="message hidden">
       <p id="errorMessageText"></p>

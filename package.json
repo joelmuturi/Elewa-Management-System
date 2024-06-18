@@ -27,6 +27,7 @@
     "define-lazy-prop": "^2.0.0",
     "define-properties": "^1.2.1",
     "detect-libc": "^2.0.3",
+    "dotenv": "^16.4.5",
     "ecdsa-sig-formatter": "^1.0.11",
     "end-of-stream": "^1.4.4",
     "es-aggregate-error": "^1.0.13",
@@ -95,7 +96,7 @@
     "mkdirp-classic": "^0.5.3",
     "ms": "^2.1.2",
     "msnodesqlv8": "^4.2.1",
-    "mssql": "^7.3.5",
+    "mssql": "^10.0.3",
     "nan": "^2.20.0",
     "napi-build-utils": "^1.0.2",
     "native-duplexpair": "^1.0.0",
@@ -162,5 +163,10 @@
   "bugs": {
     "url": "https://github.com/joelmuturi/Elewa-Management-System/issues"
   },
-  "homepage": "https://github.com/joelmuturi/Elewa-Management-System#readme"
+  "homepage": "https://github.com/joelmuturi/Elewa-Management-System#readme",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.14.5",
+    "typescript": "^5.4.5"
+  }
 }

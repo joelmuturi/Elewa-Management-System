@@ -1,92 +1,140 @@
-/* styles.css */
-
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .header {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* Form container */
-  .form-container {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Form group */
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  .form-group input[type="email"],
-  .form-group input[type="password"] {
-    width: calc(100% - 12px);
-    padding: 10px;
-    font-size: 1rem;
-  }
-  
-  .form-group button {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
-  
-  .form-group a {
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    margin-left: 10px;
-  }
-  
-  .form-group button:hover,
-  .form-group a:hover {
-    background: #555;
-  }
-  
-  /* Error/Success messages */
-  .message {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .message p {
-    margin: 0;
-  }
-  
-  .message.hidden {
-    display: none;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #4CAF50;
+}
+
+/* Form Styles */
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field .input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.forgot-pass {
+  text-align: right;
+  font-size: 14px;
+  color: #4CAF50;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.button-field {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.form-link {
+  text-align: center;
+  font-size: 14px;
+}
+
+.form-link a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.message {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#successMessage {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+#errorMessage {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Ensure the login form is displayed initially */
+#main {
+  display: block;
+}
